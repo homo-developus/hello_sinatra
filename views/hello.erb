@@ -1,0 +1,15 @@
+<h3>Title</h3>
+<span style="color:red"><%= "Hello, #{params['captures'].first}!" %></span>
+
+<% t = Date.new(2017,9,8) %>
+<% if t.saturday? || t.sunday? %>
+  <h5>
+    Weekend!
+  </h5>
+<% else %>
+  <h6>
+    We must work today! :(
+  </h6>
+<% end %>
+
+
