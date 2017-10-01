@@ -1,12 +1,15 @@
-%h3 Calculator
-%form(method="post" action="/calc.html")
+%head
+  %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+  %script(src="js/app.js")
+%body
+  %h3 Calculator
+  %h4= Time.now
+
   %label(for="expression") Input your expression, please.
   %br
   %input(type="text" id="expression" name="expression" value="#{@expression}")
   %br
   %br
-  %input(type="submit")
+  %input(type="submit" id="calc")
 
-- if @result
-  %h4 Result
-  %input(type="text" name="result" value="#{@result}")
+  #result
